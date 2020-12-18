@@ -1,0 +1,13 @@
+---
+- hosts: mahes
+  tasks:
+  - name: Install firefox,winsco,curl
+    win_chocolatey:
+      name: '{{ item }}'
+      state: present
+    loop:
+    - firefox
+    - curl
+    - winscp
+
+
